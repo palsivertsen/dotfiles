@@ -1,5 +1,6 @@
 ## Add '$include ~/projects/shell/dotfiles/.inputrc' to ~/.inputrc to use this config
 
+$include /etc/inputrc
 "\C-p":history-search-backward
 "\C-n":history-search-forward
 
