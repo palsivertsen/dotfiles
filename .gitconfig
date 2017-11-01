@@ -25,6 +25,7 @@
   addx = add -N .
   s = status
   p = add -p
+  cm = commit -m
   append = commit --amend --no-edit
   prune-features = !git checkout develop && \
     git pull && \
