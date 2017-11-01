@@ -33,7 +33,7 @@
     echo "Remaining branches:" && \
     git branch
   conflicts = diff --name-only --diff-filter=U
-  prune-branches = !git branch --merged | grep -v '*' | xargs git branch -d
+  prune-branches = !git pull --all --prune && git branch --merged | grep -v '*' | xargs git branch -d
 
 [user]
   email = palsivertsen@gmail.com
