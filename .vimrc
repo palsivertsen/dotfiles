@@ -14,6 +14,7 @@ set noexpandtab tabstop=2 shiftwidth=2
 " vim-go
 let g:go_list_type = "quickfix"
 let g:go_fmt_command = "goimports"
+let g:go_fmt_fail_silently = 1
 let g:go_addtags_transform = "camelcase"
 let g:go_auto_type_info = 1
 " highlighing
@@ -37,10 +38,10 @@ set statusline+=%*
 
 let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 1
-let g:syntastic_check_on_wq = 1
+let g:syntastic_check_on_open = 0
+let g:syntastic_check_on_wq = 0
 let g:syntastic_go_checkers = ['gometalinter']
-let g:syntastic_go_gometalinter_args = '--aggregate --disable-all --enable test --enable testify --enable gas --enable goconst --enable gocyclo --enable golint --enable gotypex --enable ineffassign --enable misspell --enable vet --enable vetshadow'
+let g:syntastic_go_gometalinter_args = '--sort path --aggregate --disable-all --enable test --enable testify --enable gas --enable goconst --enable gocyclo --enable golint --enable gotypex --enable ineffassign --enable misspell --enable vet --enable vetshadow'
 map <c-c><c-h> :lfirst<cr>
 map <c-c><c-j> :lnext<cr>
 map <c-c><c-k> :lprevious<cr>
