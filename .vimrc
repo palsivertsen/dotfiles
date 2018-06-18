@@ -1,13 +1,11 @@
 call plug#begin()
-Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
-Plug 'vim-syntastic/syntastic'
-Plug 'Valloric/YouCompleteMe'
-Plug 'bling/vim-airline'
 Plug 'airblade/vim-gitgutter'
+Plug 'bling/vim-airline'
 Plug 'ctrlpvim/ctrlp.vim'
+Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
+Plug 'scrooloose/nerdtree' | Plug 'Xuyuanp/nerdtree-git-plugin'
 Plug 'tomasr/molokai'
-Plug 'SirVer/ultisnips'
-Plug 'honza/vim-snippets'
+Plug 'vim-syntastic/syntastic' | Plug 'Valloric/YouCompleteMe' | Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 call plug#end()
 
 set nu rnu
@@ -42,7 +40,11 @@ let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 1
 let g:syntastic_go_checkers = ['gometalinter']
-let g:syntastic_go_gometalinter_args = '--disable-all --enable test --enable testify --enable gas --enable goconst --enable gocyclo --enable golint --enable gotype --enable gotypex --enable ineffassign --enable misspell --enable vet --enable vetshadow'
+let g:syntastic_go_gometalinter_args = '--aggregate --disable-all --enable test --enable testify --enable gas --enable goconst --enable gocyclo --enable golint --enable gotypex --enable ineffassign --enable misspell --enable vet --enable vetshadow'
+map <c-c><c-h> :lfirst<cr>
+map <c-c><c-j> :lnext<cr>
+map <c-c><c-k> :lprevious<cr>
+map <c-c><c-l> :llast<cr>
 
 " YCM
 let g:ycm_autoclose_preview_window_after_insertion = 1
@@ -54,3 +56,8 @@ colorscheme molokai
 " Ultisnips
 let g:UltiSnipsExpandTrigger="<c-j>"
 let g:UltiSnipsJumpForwardTrigger="<c-j>"
+
+" Damian Conways ColorColumn
+" Marks lines that exceeds 80 columns
+highlight ColorColumn ctermbg=magenta
+call matchadd('ColorColumn', '\%81v', 100)
