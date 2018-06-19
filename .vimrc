@@ -43,7 +43,6 @@ let g:syntastic_check_on_wq = 0
 let g:syntastic_go_checkers = ['gometalinter']
 let g:syntastic_go_gometalinter_args = '--aggregate --disable-all --enable test --enable testify --enable gas --enable goconst --enable gocyclo --enable golint --enable gotypex --enable ineffassign --enable misspell --enable vet --enable vetshadow'
 let g:syntastic_go_gometalinter_sort = 1
-autocmd BufEnter * silent! let g:syntastic_go_gometalinter_fname = split(globpath(expand("%:h"), expand("%:t:r") . "*"))
 map <c-c><c-h> :lfirst<cr>
 map <c-c><c-j> :lnext<cr>
 map <c-c><c-k> :lprevious<cr>
