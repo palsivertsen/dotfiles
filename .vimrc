@@ -3,8 +3,8 @@ Plug 'airblade/vim-gitgutter'
 Plug 'bling/vim-airline'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
+Plug 'palsivertsen/molokai'
 Plug 'scrooloose/nerdtree' | Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'tomasr/molokai'
 Plug 'vim-syntastic/syntastic' | Plug 'Valloric/YouCompleteMe' | Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 call plug#end()
 
