@@ -63,5 +63,5 @@ let g:UltiSnipsJumpForwardTrigger="<c-j>"
 
 " Damian Conways ColorColumn
 " Marks lines that exceeds 80 columns
-highlight ColorColumn ctermbg=magenta
+highlight ColorColumn ctermbg=cyan ctermfg=black
 call matchadd('ColorColumn', '\%81v', 100)
