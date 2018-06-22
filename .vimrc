@@ -65,3 +65,6 @@ let g:UltiSnipsJumpForwardTrigger="<c-j>"
 " Marks lines that exceeds 80 columns
 highlight ColorColumn ctermbg=cyan ctermfg=black
 call matchadd('ColorColumn', '\%81v', 100)
+
+" ctrlp
+let g:ctrlp_show_hidden = 1
