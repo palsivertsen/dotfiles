@@ -8,6 +8,8 @@ set colored-stats On
 set completion-ignore-case On
 set mark-symlinked-directories On
 set visible-stats On
+set keymap vi
+set editing-mode vi
 
 # menu-complete
 TAB:menu-complete
