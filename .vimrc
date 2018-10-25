@@ -14,6 +14,7 @@ set noexpandtab tabstop=2 shiftwidth=2
 set hlsearch
 set autochdir
 set ignorecase
+set wildmenu
 
 " vim-go
 let g:go_list_type = "quickfix"
