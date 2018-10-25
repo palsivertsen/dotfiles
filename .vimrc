@@ -15,6 +15,7 @@ set hlsearch
 set autochdir
 set ignorecase
 set wildmenu
+set scrolloff=10
 
 " vim-go
 let g:go_list_type = "quickfix"
