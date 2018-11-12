@@ -34,7 +34,7 @@
     git branch
   conflicts = diff --name-only --diff-filter=U
   prune-branches = !git pull --all --prune && git branch --merged | grep -v '*' | xargs git branch -d
-  ignore = "!gi() { curl -L -s https://www.gitignore.io/api/$@ ;}; gi >> .gitignore"
+  ignore = "!bash -c 'curl -s https://www.gitignore.io/api/$@ >> .gitignore'"
 
 [user]
   email = palsivertsen@gmail.com
