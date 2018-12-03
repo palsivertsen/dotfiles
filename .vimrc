@@ -72,3 +72,8 @@ call matchadd('ColorColumn', '\%81v', 100)
 
 " ctrlp
 let g:ctrlp_show_hidden = 1
+
+" Jump to the last position when reopening a file
+if has("autocmd")
+  au BufReadPost * if line("'\"") > 1 && line("'\"") <= line("$") | exe "normal! g'\"" | endif
+endif
