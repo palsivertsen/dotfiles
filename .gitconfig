@@ -11,7 +11,7 @@
 [push]
   default = simple
 [alias]
-  logx = log --all --graph --decorate=short --pretty=format:'%w(83)%C(auto)%h% an (%ar):% s%n%-d'
+  logx = log --all --graph --decorate=short --pretty=format:'%w(83)%C(auto)%h %C(yellow)%C(bold)%G?%Creset%C(auto)% an (%ar):% s%n%-d'
   co = checkout
   staged = diff --staged
   initignore = !git init && \
