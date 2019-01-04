@@ -55,15 +55,21 @@ map <c-c><c-k> :lprevious<cr>
 map <c-c><c-l> :llast<cr>
 
 " YCM
-let g:ycm_autoclose_preview_window_after_insertion = 1
+let g:ycm_complete_in_comments = 1
+let g:ycm_complete_in_strings = 1
+let g:ycm_collect_identifiers_from_comments_and_strings = 1
+let g:ycm_autoclose_preview_window_after_completion = 1
+
+" Completion
+let g:ycm_key_list_select_completion = ['<tab>', '<Down>']
+let g:ycm_key_list_previous_completion = ['<s-tab>', '<Up>']
+let g:UltiSnipsExpandTrigger = "<C-space>"
+let g:UltiSnipsJumpForwardTrigger = "<C-j>"
+let g:UltiSnipsJumpBackwardTrigger = "<C-k>"
 
 " Molokai
 let g:rehash256 = 1
 colorscheme molokai
-
-" Ultisnips
-let g:UltiSnipsExpandTrigger="<c-j>"
-let g:UltiSnipsJumpForwardTrigger="<c-j>"
 
 " Damian Conways ColorColumn
 " Marks lines that exceeds 80 columns
