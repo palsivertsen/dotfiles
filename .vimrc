@@ -37,14 +37,18 @@ autocmd Filetype go command! -bang AV call go#alternate#Switch(<bang>0, 'vsplit'
 autocmd Filetype go command! -bang AS call go#alternate#Switch(<bang>0, 'split')
 autocmd Filetype go command! -bang AT call go#alternate#Switch(<bang>0, 'tabe')
 
-nnoremap <C-t>h  :tabfirst<CR>
-nnoremap <C-t>j  :tabnext<CR>
-nnoremap <C-t>k  :tabprev<CR>
-nnoremap <C-t>l  :tablast<CR>
-nnoremap <C-t>t  :tabedit<Space>
-nnoremap <C-t>n  :tabnew<CR>
-nnoremap <C-t>m  :tabmove<Space>
-nnoremap <C-t>d  :tabclose<CR>
+" window tabs
+nnoremap <C-t><C-h>  :tabfirst<CR>
+nnoremap <C-t><C-j>  :tabnext<CR>
+nnoremap <C-t><C-k>  :tabprev<CR>
+nnoremap <C-t><C-l>  :tablast<CR>
+nnoremap <C-t><C-t>  :tabedit<Space>
+nnoremap <C-t><C-n>  :tabnew<CR>
+nnoremap <C-t><C-m>  :tabmove<Space>
+nnoremap <C-t><C-d>  :tabclose<CR>
+
+" resize window
+nnoremap <C-w><C-m>  :execute('resize ' . line('$'))<CR>
 
 " syntastic
 set statusline+=%#warningmsg#
