@@ -5,9 +5,31 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
 Plug 'palsivertsen/molokai'
 Plug 'scrooloose/nerdtree' | Plug 'Xuyuanp/nerdtree-git-plugin'
-Plug 'vim-syntastic/syntastic' | Plug 'Valloric/YouCompleteMe' | Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
+" Plug 'vim-syntastic/syntastic' | Plug 'Valloric/YouCompleteMe' | Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
+Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 Plug 'osyo-manga/vim-brightest'
+Plug '~/projects/vim/lowercase-dockerfile'
+Plug 'Shougo/deoplete.nvim', { 'tag': '5.0' }
+Plug 'roxma/nvim-yarp'
+Plug 'roxma/vim-hug-neovim-rpc'
+Plug 'deoplete-plugins/deoplete-go', { 'do': 'make'}
+
+Plug 'ervandew/supertab'
+Plug 'majutsushi/tagbar'
 call plug#end()
+
+call deoplete#custom#option({
+\ 'auto_complete_delay': 0,
+\ 'smart_case': v:true,
+\ })
+
+nnoremap <F8> :TagbarToggle<CR>
+
+let g:deoplete#enable_at_startup = 1
+let g:deoplete#sources#go#package_dot = 1
+let g:deoplete#sources#go#pointer = 1
+let g:deoplete#sources#go#builtin_objects = 1
+let g:deoplete#sources#go#unimported_packages = 1
 
 set nu rnu
 set noexpandtab tabstop=2 shiftwidth=2
@@ -15,7 +37,7 @@ set hlsearch
 set autochdir
 set ignorecase
 set wildmenu
-set scrolloff=10
+set scrolloff=999
 
 " vim-go
 let g:go_list_type = "quickfix"
@@ -50,32 +72,9 @@ nnoremap <C-t><C-d>  :tabclose<CR>
 " resize window
 nnoremap <C-w><C-m>  :execute('resize ' . line('$'))<CR>
 
-" syntastic
-set statusline+=%#warningmsg#
-set statusline+=%{SyntasticStatuslineFlag()}
-set statusline+=%*
-
-let g:syntastic_always_populate_loc_list = 1
-let g:syntastic_auto_loc_list = 1
-let g:syntastic_check_on_open = 0
-let g:syntastic_check_on_wq = 0
-let g:syntastic_go_checkers = ['gometalinter']
-let g:syntastic_go_gometalinter_args = '--aggregate --disable-all --enable test --enable testify --enable gosec --enable goconst --enable gocyclo --enable golint --enable gotypex --enable ineffassign --enable misspell --enable vet --enable vetshadow'
-let g:syntastic_go_gometalinter_sort = 1
-map <c-c><c-h> :lfirst<cr>
-map <c-c><c-j> :lnext<cr>
-map <c-c><c-k> :lprevious<cr>
-map <c-c><c-l> :llast<cr>
-
-" YCM
-let g:ycm_complete_in_comments = 1
-let g:ycm_complete_in_strings = 1
-let g:ycm_collect_identifiers_from_comments_and_strings = 1
-let g:ycm_autoclose_preview_window_after_insertion = 1
-
 " Completion
-let g:ycm_key_list_select_completion = ['<tab>', '<Down>']
-let g:ycm_key_list_previous_completion = ['<s-tab>', '<Up>']
+"let g:ycm_key_list_select_completion = ['<tab>', '<Down>']
+"let g:ycm_key_list_previous_completion = ['<s-tab>', '<Up>']
 let g:UltiSnipsExpandTrigger = "<C-space>"
 let g:UltiSnipsJumpForwardTrigger = "<C-j>"
 let g:UltiSnipsJumpBackwardTrigger = "<C-k>"
@@ -83,11 +82,6 @@ let g:UltiSnipsJumpBackwardTrigger = "<C-k>"
 " Molokai
 let g:rehash256 = 1
 colorscheme molokai
-
-" Damian Conways ColorColumn
-" Marks lines that exceeds 80 columns
-highlight ColorColumn ctermbg=cyan ctermfg=black
-call matchadd('ColorColumn', '\%81v', 100)
 
 " ctrlp
 let g:ctrlp_show_hidden = 1
