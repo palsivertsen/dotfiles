@@ -15,11 +15,6 @@ Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets' | Plug 'ervandew/supertab'
 Plug 'roxma/vim-hug-neovim-rpc' | Plug 'roxma/nvim-yarp' | Plug 'Shougo/deoplete.nvim', { 'tag': '5.0' } | Plug 'deoplete-plugins/deoplete-go', { 'do': 'make'}
 call plug#end()
 
-call deoplete#custom#option({
-\ 'auto_complete_delay': 0,
-\ 'smart_case': v:true,
-\ })
-
 " completion
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#sources#go#package_dot = 1
@@ -76,7 +71,7 @@ nnoremap <C-w><C-m>  :execute('resize ' . line('$'))<CR>
 " Completion
 "let g:ycm_key_list_select_completion = ['<tab>', '<Down>']
 "let g:ycm_key_list_previous_completion = ['<s-tab>', '<Up>']
-let g:UltiSnipsExpandTrigger = "<C-space>"
+let g:UltiSnipsExpandTrigger = "<C-@>"
 let g:UltiSnipsJumpForwardTrigger = "<C-j>"
 let g:UltiSnipsJumpBackwardTrigger = "<C-k>"
 
