@@ -23,8 +23,7 @@ call deoplete#custom#option({
 \ 'smart_case': v:true,
 \ })
 
-nnoremap <F8> :TagbarToggle<CR>
-
+" completion
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#sources#go#package_dot = 1
 let g:deoplete#sources#go#pointer = 1
@@ -58,6 +57,11 @@ autocmd Filetype go command! -bang A call go#alternate#Switch(<bang>0, 'edit')
 autocmd Filetype go command! -bang AV call go#alternate#Switch(<bang>0, 'vsplit')
 autocmd Filetype go command! -bang AS call go#alternate#Switch(<bang>0, 'split')
 autocmd Filetype go command! -bang AT call go#alternate#Switch(<bang>0, 'tabe')
+" navigate quickfix
+nnoremap <c-c><c-h> :cfirst<cr>
+nnoremap <c-c><c-j> :cnext<cr>
+nnoremap <c-c><c-k> :cprevious<cr>
+nnoremap <c-c><c-l> :clast<cr>
 
 " window tabs
 nnoremap <C-t><C-h>  :tabfirst<CR>
