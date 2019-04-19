@@ -1,21 +1,18 @@
 call plug#begin()
+" git
 Plug 'airblade/vim-gitgutter'
+
+" other
 Plug 'bling/vim-airline'
 Plug 'ctrlpvim/ctrlp.vim'
-Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
-Plug 'palsivertsen/molokai'
-Plug 'scrooloose/nerdtree' | Plug 'Xuyuanp/nerdtree-git-plugin'
-" Plug 'vim-syntastic/syntastic' | Plug 'Valloric/YouCompleteMe' | Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
-Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets'
 Plug 'osyo-manga/vim-brightest'
-Plug '~/projects/vim/lowercase-dockerfile'
-Plug 'Shougo/deoplete.nvim', { 'tag': '5.0' }
-Plug 'roxma/nvim-yarp'
-Plug 'roxma/vim-hug-neovim-rpc'
-Plug 'deoplete-plugins/deoplete-go', { 'do': 'make'}
+Plug 'palsivertsen/molokai'
+Plug 'palsivertsen/lowercase-dockerfile'
 
-Plug 'ervandew/supertab'
-Plug 'majutsushi/tagbar'
+" go
+Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
+Plug 'SirVer/ultisnips' | Plug 'honza/vim-snippets' | Plug 'ervandew/supertab'
+Plug 'roxma/vim-hug-neovim-rpc' | Plug 'roxma/nvim-yarp' | Plug 'Shougo/deoplete.nvim', { 'tag': '5.0' } | Plug 'deoplete-plugins/deoplete-go', { 'do': 'make'}
 call plug#end()
 
 call deoplete#custom#option({
