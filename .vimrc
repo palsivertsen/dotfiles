@@ -24,7 +24,7 @@ let g:deoplete#sources#go#unimported_packages = 1
 
 set nu rnu
 set noexpandtab tabstop=2 shiftwidth=2
-set hlsearch
+set hlsearch incsearch
 set autochdir
 set ignorecase
 set wildmenu
