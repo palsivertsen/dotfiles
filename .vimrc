@@ -8,6 +8,7 @@ Plug 'ctrlpvim/ctrlp.vim'
 Plug 'osyo-manga/vim-brightest'
 Plug 'palsivertsen/molokai'
 Plug 'palsivertsen/lowercase-dockerfile'
+Plug 'kana/vim-textobj-user' | Plug 'fvictorio/vim-textobj-backticks'
 
 " go
 Plug 'fatih/vim-go', { 'do': ':GoInstallBinaries' }
