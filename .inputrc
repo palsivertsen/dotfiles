@@ -1,9 +1,5 @@
 ## Add '$include ~/projects/shell/dotfiles/.inputrc' to ~/.inputrc to use this config
 
-$include /etc/inputrc
-"\C-p":history-search-backward
-"\C-n":history-search-forward
-
 set editing-mode vi
 set colored-stats On
 set completion-ignore-case On
@@ -16,3 +12,6 @@ set menu-complete-display-prefix On
 set show-all-if-ambiguous On
 set show-all-if-unmodified On
 set completion-query-items 250
+
+"\C-p":history-search-backward
+"\C-n":history-search-forward
