@@ -4,6 +4,7 @@ $include /etc/inputrc
 "\C-p":history-search-backward
 "\C-n":history-search-forward
 
+set editing-mode vi
 set colored-stats On
 set completion-ignore-case On
 set mark-symlinked-directories On
